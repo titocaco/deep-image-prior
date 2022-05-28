@@ -228,5 +228,15 @@ def optimize(optimizer_type, parameters, closure, LR, num_iter):
             optimizer.zero_grad()
             closure()
             optimizer.step()
+            
+    elif optimizer_type == 'sgd':
+        print('Starting optimization with SGD')
+        optimizer = torch.optim.SGD(parameters, lr=LR)
+        
+        for j in range(num_iter):
+            optimizer.zero_grad()
+            closure()
+            optimizer.step()
+            
     else:
         assert False
