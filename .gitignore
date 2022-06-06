@@ -1,3 +1,7 @@
 
 .ipynb_checkpoints/
+results/denoising/charts/
+results/denoising/figs/progress/
+results/denoising/figs/ref/
 *.pyc
+*.pdf
