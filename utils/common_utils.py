@@ -240,3 +240,11 @@ def optimize(optimizer_type, parameters, closure, LR, num_iter):
             
     else:
         assert False
+
+
+def save_img (img, path='./', fig_name='figure'):
+    fig = plt.figure()
+    plt.imshow(np.asarray(img).transpose((1, 2, 0)))
+    plt.axis('off')
+    plt.savefig(path + fig_name + '.png', dpi=300)
+    plt.close(fig)
